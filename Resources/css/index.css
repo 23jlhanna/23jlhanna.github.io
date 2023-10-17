@@ -1,0 +1,96 @@
+@font-face {
+    font-family: Cheque;
+    src: url('../fonts/Cheque-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=62b518&c2=cedbcb&gt=r&gd=dtr
+    */
+    background: #62B518;
+    background: radial-gradient(at right top, #62B518, #CEDBCB);
+    background-attachment: fixed;
+}
+
+.titleSpot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: default;
+}
+.titleLogo {
+
+}
+.titleText {
+    font-family: Cheque;
+    font-size: 11vw;
+    margin-bottom: -2%;
+}
+
+.bioText {
+    animation-name: bioTextLoad;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    font-family: monospace;
+    font-size: max(1vh, 2vw);
+    margin-bottom: 0%;
+}
+.bioSubLine {
+    animation-name: bioSubLineLoad;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    font-family: monospace;
+    font-size: max(1vh, 2vw);
+    margin-bottom: 0%;
+    transform: translateY(-50%)
+}
+
+@keyframes bioTextLoad {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+}
+@keyframes bioSubLineLoad {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-50%);
+        opacity: 100%;
+    }
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(38, 78, 38);
+
+    position: absolute;
+    bottom:0;
+}
