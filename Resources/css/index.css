@@ -25,13 +25,63 @@ body {
     flex-direction: column;
     cursor: default;
 }
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 17vw;
+}
+.logoContainer {
+    perspective: 1000px;
+    margin-right: 2vw;
+}
 .titleLogo {
-
+    width: 6vw;
+    aspect-ratio: 1/1;
+    transform-style: preserve-3d;
+    animation: spin 5s infinite linear;
+}
+.logoFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.logoTop {
+    transform: rotateX(90deg) translateZ(3vw);
+    background-color: rgba(31, 155, 49, 0.5);
+}
+.logoBottom {
+    transform: rotateX(-90deg) translateZ(3vw);
+    background-color: rgba(45, 203, 69, 0.5);
+}
+.logoLeft {
+    transform: rotateY(-90deg) translateZ(3vw);
+    background-color: rgba(22, 184, 46, 0.5);
+}
+.logoRight {
+    transform: rotateY(90deg) translateZ(3vw);
+    background-color: rgba(14, 136, 33, 0.5);
+}
+.logoBack {
+    transform: rotateX(-180deg) translateZ(3vw);
+    background-color: rgba(45, 182, 65, 0.5);
+}
+.logoFront {
+    transform: rotateX(0deg) translateZ(3vw);
+    background-color: rgba(11, 185, 37, 0.5);
 }
 .titleText {
     font-family: Cheque;
     font-size: 11vw;
-    margin-bottom: -2%;
+}
+@keyframes spin {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
 }
 
 .bioText {
@@ -82,6 +132,69 @@ body {
         opacity: 100%;
     }
 }
+.MRWrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10vw;
+
+    display: grid;
+    grid-row: 2;
+}
+.MRTab {
+    border-radius: 1vw 1vw 0vw 0vw;
+    width: 15vw;
+    height: 3vw;
+    backdrop-filter: brightness(1.4);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabShadow {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -15px 30px -30px rgba(0,0,0,.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.tabTitle {
+    font-family: monospace;
+    font-size: clamp(100%, 110%)
+}
+
+.mostRecentProject {
+    border-radius: 0vw 2vw 2vw 2vw;
+    width: 100%;
+    backdrop-filter: brightness(1.4);
+
+    text-decoration: none;
+
+    display: flex;
+}
+.MRTitle {
+    color: black;
+    justify-self: start;
+    align-self: start;
+    margin-left: 2%;
+    font-size: 5vw;
+    font-family:cursive;
+    text-shadow: 2px 2px 14px rgba(35,15,9,0.55);
+}
+.MRThumbnail {
+    align-self: center;
+    width: 60%;
+    aspect-ratio: 16/9;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: 2%;
+
+    border-radius: 2vw;
+}
 
 .footer {
     width: 100%;
@@ -89,8 +202,9 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(38, 78, 38);
+    background-color: rgb(89, 191, 89);
 
     position: absolute;
     bottom:0;
+    box-shadow: inset 0px -64px 92px -67px rgba(0,0,0,0.75);
 }
