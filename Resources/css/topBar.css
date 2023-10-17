@@ -47,7 +47,7 @@
     height: 100%;
     overflow: hidden;
     border-radius: 50%;
-    backdrop-filter: brightness(1.2);
+    @-webkit-backdrop-filter: brightness(1.2);
     filter: drop-shadow(0px 0px 17px rgba(64, 94, 37, 0.5));
 
     display: flex;
@@ -109,12 +109,12 @@
     padding-right: 5%;
 
     border-radius: 10px;
-    backdrop-filter: brightness(1.2);
+    @-webkit-backdrop-filter: brightness(1.2);
 
     transition: all .5s;
 }
 .barEmail:hover {
-    backdrop-filter: brightness(1.35);
+    @-webkit-backdrop-filter: brightness(1.35);
 }
 .barEmailText {
     color: black;
