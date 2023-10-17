@@ -150,7 +150,7 @@ body {
     border-radius: 1vw 1vw 0vw 0vw;
     width: 15vw;
     height: 3vw;
-    backdrop-filter: brightness(1.4);
+    background-color: rgb(234, 249, 219);
     overflow: hidden;
 
     display: flex;
@@ -175,7 +175,7 @@ body {
 .mostRecentProject {
     border-radius: 0vw 2vw 2vw 2vw;
     width: 100%;
-    backdrop-filter: brightness(1.4);
+    background-color: rgb(234, 249, 219);
 
     text-decoration: none;
 
