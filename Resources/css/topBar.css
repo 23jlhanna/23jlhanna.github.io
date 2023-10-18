@@ -237,22 +237,22 @@
 
 @keyframes dropdownMoveIn {
     from {
-        left: -100%;
+        transform: translateX(-100%);
         display: none;
     }
     to {
-        left: 0;
+        transform: translateX(0%);
         display: flex;
     }
 }
 
 @keyframes dropdownMoveOut {
     0% {
-        left: 0%;
+        transform: translateX(0%);
         display: flex;
     }
     100% {
-        left: 100%;
+        transform: translateX(100%);
         display: none;
     }
 }
